@@ -13,7 +13,7 @@
 
 typedef struct DNode {
     ElemType data;
-    struct DNode* prior;
+    struct DNode* prev;
     struct DNode* next;
 } DNode;
 
