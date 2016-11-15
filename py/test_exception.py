@@ -53,6 +53,8 @@ def test3():
         print 'Other exception happened!'
         # return 0
         raise
+    else:
+        print 'Your input is right!'
     finally:
         # use finally. Though there is a return sentence
         print 'Finally this sentence must be executed!'
