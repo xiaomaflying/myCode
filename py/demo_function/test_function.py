@@ -1,7 +1,7 @@
 #encoding=utf-8
 
 """
-实验前需要了解的函数知识：
+a. 函数基础
 
 
 python函数的两个作用
@@ -46,11 +46,25 @@ def test3(debug=True):
 #====================
 
 def intersect(seq1, seq2):
-    u""""""
+    u"""返回两个可序列对象的交集.
+    该例子同时说明了函数的多态性，提供接口，并不限制类型
+    """
+    seq = []
+    for x in seq1:
+        if x in seq2:
+            seq.append(x)
+    return seq
+
+    # return [x for x in seq1 if x in seq2]
 
 
 if __name__ == '__main__':
     #test1()
 
     #test3(False)
+
+    #print intersect('abd', 'bcd')
+    #print intersect([1, 2, 3], [2, 3, 5])
+    #print intersect((1, 2, 3), [2, 3, 5])
+
     pass
