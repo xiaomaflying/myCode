@@ -15,10 +15,12 @@ typedef struct AList {
     int len;
 
     void (*free)(void* ptr); /* Used to free the value in the node */
+    void (*print)(void* ptr);
 } AList;
 
 AList* initList(void);
 void releaseList(AList* list);
 void printList(AList* list);
+void appendList(AList* list, ANode* node);
 
 #endif

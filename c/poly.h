@@ -11,6 +11,7 @@ typedef struct PolyItem {
 
 AList* createPoly();
 void releasePoly();
-void addPoly(AList* a, Alist* b);
+void appendPolyItem(AList* l, float coef, int expn);
+void addPoly(AList* a, AList* b);
 void printPoly();
 #endif
