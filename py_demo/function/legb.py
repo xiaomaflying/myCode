@@ -19,8 +19,6 @@ ex: test2
 
 
 内置作用域有哪些变量？
->>> import builtins
->>> dir(builtins)
 
 由于LEGB规则，本地变量会覆盖全局变量，而全局变量会覆盖内置变量
 ex: test3
