@@ -49,6 +49,13 @@ class SongBird(Bird):
     def sing(self):
         print self.sound
 
+    def eat(self):
+        if self.hungry:
+            print 'SongBird eating'
+            self.hungry = 0
+        else:
+            print 'SongBird is full!!!'
+
 def test1():
     bird = Bird()
     bird.eat()
