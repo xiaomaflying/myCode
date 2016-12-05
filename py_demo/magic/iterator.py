@@ -11,6 +11,7 @@
     手动迭代要先将可迭代对象转化为迭代器对象（Iterator）, 然后调用next方法，直到该方法抛出StopItertion异常
     >>> l = [1, 2, 3]
     >>> it = iter(l)
+    >>> type(it)
     >>> it.next(); it.next(); it.next(); it.next()
     >>> next(it)
 
