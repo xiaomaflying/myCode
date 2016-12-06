@@ -15,7 +15,7 @@
 
 3. 一个返回n个元素的斐波那契数列函数。将其改写成生成器。
 
-4. 将迭代器改编成生成器
+4. 生成器往往是迭代器的一种。作业：编写一个迭代器，实现斐波那契数列的功能
 """
 
 # 2.yield
@@ -53,5 +53,27 @@ def test3():
     for item in g:
         print item
 
+# 4
+class Fib:
+    def __init__(self, max):
+        self.max = max
+        self.a = 0
+        self.b = 1
+        self.cur = 0
+    def __iter__(self):
+        return self
+    def next(self):
+        fib = self.b
+        if self.cur >= self.max:
+            raise StopIteration
+        self.a, self.b = self.b, self.a + self.b
+        self.cur += 1
+        return fib
 
-test3()
+def test4():
+    fib = Fib(8)
+    print list(fib)
+
+
+test4()
+
