@@ -23,7 +23,14 @@
 def test():
     yield None
 
+def test1():
+    for i in range(5):
+        yield i
+
 print test()
+g = test1()
+print g.next()
+print next(g)
 
 # 3
 def fib(n):
